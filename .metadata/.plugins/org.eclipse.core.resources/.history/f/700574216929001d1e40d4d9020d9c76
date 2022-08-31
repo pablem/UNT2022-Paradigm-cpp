@@ -1,0 +1,27 @@
+#include<iostream>
+#include "Libro.h"
+
+using namespace std;
+
+Libro::Libro(int cod, string tit, string desc, string aut, Categoria cat, float prec) {
+	codigo = cod;
+	titulo = tit;
+	descripcion = desc;
+	autor = aut;
+	categoria = cat;
+	precio = prec;
+}
+
+float Libro::getIVA(){
+	return IVA;
+}
+float Libro::getPrecioBase(){
+	return precio;
+}
+void Libro::listarInformacion() {
+	cout << "Código: " << this->codigo << " - Título: " << this->titulo << " - etc.." <<endl;
+}
+Libro::~Libro() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,11 @@
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+class Libro {
+public:
+	Libro();
+	virtual ~Libro();
+};
+
+#endif /* LIBRO_H_ */

@@ -1,0 +1,16 @@
+#include<iostream.h>
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+class Libro {
+	int codigo;
+	string nombre;
+	string descripcion;
+	string
+public:
+	Libro();
+	virtual ~Libro();
+};
+
+#endif /* LIBRO_H_ */

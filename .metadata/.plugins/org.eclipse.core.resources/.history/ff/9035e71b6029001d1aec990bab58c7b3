@@ -1,0 +1,20 @@
+#include <iostream>
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+using namespace std;
+
+class Libro {
+	int codigo;
+	string nombre;
+	string descripcion;
+	string autor;
+	float precio;
+
+public:
+	Libro();
+	virtual ~Libro();
+};
+
+#endif /* LIBRO_H_ */

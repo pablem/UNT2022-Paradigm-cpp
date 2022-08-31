@@ -1,0 +1,17 @@
+/*
+ * Libro.h
+ *
+ *  Created on: 31 ago. 2022
+ *      Author: Alumno
+ */
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+class Libro {
+public:
+	Libro();
+	virtual ~Libro();
+};
+
+#endif /* LIBRO_H_ */

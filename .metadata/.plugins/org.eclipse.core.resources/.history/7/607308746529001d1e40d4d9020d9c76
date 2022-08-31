@@ -1,0 +1,31 @@
+#include <iostream>
+
+#ifndef LIBRO_H_
+#define LIBRO_H_
+
+using namespace std;
+
+class Libro {
+
+	enum Categoria { Clasico, Policial, Novela };
+
+	int codigo;
+	string titulo;
+	string descripcion;
+	string autor;
+	Categoria categoria;
+	float precio;
+	float const IVA = 0.21;
+
+protected:
+	float getIVA();
+	float getPrecioBase();
+
+public:
+	Libro();
+	float calcularPrecioVenta();
+	void listarInformacion();
+	virtual ~Libro();
+};
+
+#endif /* LIBRO_H_ */

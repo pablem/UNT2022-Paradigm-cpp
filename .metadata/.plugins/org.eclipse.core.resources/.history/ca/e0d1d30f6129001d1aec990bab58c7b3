@@ -1,0 +1,12 @@
+
+#include "Libro.h"
+
+Libro::Libro() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Libro::~Libro() {
+	// TODO Auto-generated destructor stub
+}
+
