@@ -1,0 +1,25 @@
+#include <iostream>
+#include <chrono>
+#include <ctime>
+
+using namespace std;
+
+#ifndef PRODUCTO_H_
+#define PRODUCTO_H_
+
+class Producto {
+	int codigo;
+	string descripcion;
+	float precioBase;
+	static const float IVA = 1.15;
+
+public:
+	Producto();
+	float calcularPrecio();
+	void mostrar();
+	virtual ~Producto();
+
+
+};
+
+#endif /* PRODUCTO_H_ */

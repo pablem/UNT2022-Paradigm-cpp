@@ -4,11 +4,21 @@
 using namespace std;
 
 Producto::Producto() {
-	// TODO Auto-generated constructor stub
+	codigo=0;
+	precioBase=0;
+	descripcion="";
 }
 
+Producto::Producto(int cod, string desc, float precio) {
+	codigo = cod;
+	precioBase = precio;
+	descripcion = desc;
+}
+
+Producto::Producto()
+
 float Producto::calcularPrecio() {
-	return 1.21*this->precioBase;
+	return IVA*precioBase;
 }
 
 void mostrar() {

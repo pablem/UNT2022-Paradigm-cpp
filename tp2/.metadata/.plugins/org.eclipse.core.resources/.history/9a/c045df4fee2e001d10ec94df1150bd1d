@@ -1,0 +1,23 @@
+#include<iostream>
+#include "Producto.h"
+
+using namespace std;
+
+Producto::Producto() {
+	codigo=0;
+	precioBase=0;
+	descripcion="";
+}
+
+float Producto::calcularPrecio() {
+	return 1.21*this->precioBase;
+}
+
+void mostrar() {
+	//cout << "C�digo: " << this.get << " - Descripci�n: " << this->descripcion << " - Precio base: " << this->precio <<endl;
+}
+
+Producto::~Producto() {
+	// TODO Auto-generated destructor stub
+}
+

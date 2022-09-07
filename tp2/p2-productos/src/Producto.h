@@ -11,30 +11,25 @@ class Producto {
 	int codigo;
 	string descripcion;
 	float precioBase;
+	static const float IVA = 1.15;
 
 public:
-	Producto();
+	Producto();						//...por defecto c/codigo=000
+	Producto(int ,string, float );	//...sobrecargado c/parámetros
+	Producto(const Producto &);		//...copia
 	float calcularPrecio();
 	void mostrar();
-	virtual ~Producto();
+	~Producto(); //virtual?			//destructor
 
-	int getCodigo() const {
-		return codigo;
-	}
-	void setCodigo(int codigo) {
-		this->codigo = codigo;
-	}
+	int getCodigo() const;
+//	{
+//		return codigo;
+//	}
 	const string& getDescripcion() const {
 		return descripcion;
 	}
-	void setDescripcion(const string& descripcion) {
-		this->descripcion = descripcion;
-	}
 	float getPrecioBase() const {
 		return precioBase;
-	}
-	void setPrecioBase(float precioBase) {
-		this->precioBase = precioBase;
 	}
 };
 
