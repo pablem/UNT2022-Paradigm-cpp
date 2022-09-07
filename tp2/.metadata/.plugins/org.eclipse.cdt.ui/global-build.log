@@ -1,0 +1,5 @@
+23:33:10 **** Incremental Build of configuration Debug for project p2-productos ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.cpp" 
+g++ -o p2-productos.exe "src\\Producto.o" "src\\p2-productos.o" 
+Info: Nothing to build for p2-productos

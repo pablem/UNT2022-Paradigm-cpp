@@ -1,0 +1,8 @@
+23:24:26 **** Incremental Build of configuration Debug for project p1-libros ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Libro.o" "..\\src\\Libro.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\p1-libros.o" "..\\src\\p1-libros.cpp" 
+g++ -o p1-libros.exe "src\\Libro.o" "src\\p1-libros.o" 
+
+23:24:38 Build Finished. 0 errors, 0 warnings. (took 11s.384ms)
+
