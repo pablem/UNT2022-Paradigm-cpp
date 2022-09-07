@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : p2-producto.cpp
+// Name        : p2-productos.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice

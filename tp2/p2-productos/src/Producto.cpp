@@ -12,7 +12,7 @@ float Producto::calcularPrecio() {
 }
 
 void mostrar() {
-	cout << "Código: " << this.get << " - Descripción: " << this->descripcion << " - Precio base: " << this->precio <<endl;
+	//cout << "Cï¿½digo: " << this.get << " - Descripciï¿½n: " << this->descripcion << " - Precio base: " << this->precio <<endl;
 }
 
 Producto::~Producto() {
