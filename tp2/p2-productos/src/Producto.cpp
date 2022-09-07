@@ -6,7 +6,7 @@ using namespace std;
 Producto::Producto() {
 	codigo=0;
 	precioBase=0;
-	descripcion="";
+//	descripcion=""; //string me lo permite
 }
 
 Producto::Producto(int cod, string desc, float precio) {
@@ -15,17 +15,30 @@ Producto::Producto(int cod, string desc, float precio) {
 	descripcion = desc;
 }
 
-Producto::Producto()
+Producto::Producto(const Producto &p) {
+	codigo=p.codigo;
+	precioBase=p.precioBase;
+	descripcion=p.descripcion;
+}
 
 float Producto::calcularPrecio() {
 	return IVA*precioBase;
 }
 
-void mostrar() {
-	//cout << "C�digo: " << this.get << " - Descripci�n: " << this->descripcion << " - Precio base: " << this->precio <<endl;
+void Producto::mostrar() {
+	cout << codigo << " - " << descripcion << " - Precio base: $" << precioBase <<endl;
 }
 
-Producto::~Producto() {
-	// TODO Auto-generated destructor stub
+int Producto::getCodigo() const {
+	return codigo;
 }
+
+string Producto::getDescripcion() const {
+	return descripcion;
+}
+
+float Producto::getPrecioBase() const {
+	return precioBase;
+}
+
 

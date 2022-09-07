@@ -19,18 +19,11 @@ public:
 	Producto(const Producto &);		//...copia
 	float calcularPrecio();
 	void mostrar();
-	~Producto(); //virtual?			//destructor
-
+//	~Producto(); //virtual?
 	int getCodigo() const;
-//	{
-//		return codigo;
-//	}
-	const string& getDescripcion() const {
-		return descripcion;
-	}
-	float getPrecioBase() const {
-		return precioBase;
-	}
+	string getDescripcion() const;
+	float getPrecioBase() const;
+
 };
 
 #endif /* PRODUCTO_H_ */

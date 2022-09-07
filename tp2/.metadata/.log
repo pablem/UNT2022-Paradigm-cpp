@@ -1500,3 +1500,30 @@ Caused by: java.lang.NullPointerException
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
 	... 64 more
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.896
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.doc.user_5.4.0.201806170908 [108]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.896
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.tracecompass.gdbtrace.doc.user_4.0.0.201806131415 [476]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.896
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.autotools.docs_2.0.2.201806170908 [79]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.911
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.tracecompass.doc.user_4.0.0.201806131415 [474]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.911
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.8.0.v20180531-1055 [424]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.911
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.meson.docs_1.0.0.201806170908 [126]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.927
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.debug.application.doc_1.1.0.201806170908 [97]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.help.base 2 0 2022-09-07 18:05:16.943
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.tracecompass.doc.dev_4.0.0.201806131415 [473]'. The index should be rebuilt with Lucene 7.0.0
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-09-07 18:14:15.096
+!MESSAGE Indexed '3-contador' (1 sources, 120 headers) in 4,26 sec: 11.978 declarations; 19.626 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
