@@ -1,6 +1,4 @@
-01:39:54 **** Rebuild of configuration Debug for project p4-claseVector ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vector.o" "..\\src\\Vector.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\p4-claseVector.o" "..\\src\\p4-claseVector.cpp" 
-g++ -o p4-claseVector.exe "src\\Vector.o" "src\\p4-claseVector.o" 
+Info: Nothing to build for p4-claseVector
 Info: Nothing to build for p3-contador
+Info: Nothing to build for p4-claseVector
+Info: Nothing to build for p4-claseVector
