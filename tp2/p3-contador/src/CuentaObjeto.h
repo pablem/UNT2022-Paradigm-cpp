@@ -15,10 +15,12 @@ class CuentaObjeto {
 	static int objCreados;
 	static int objDestruidos;
 
+	int dato;
+
 	public:
 	CuentaObjeto();
 	CuentaObjeto(const CuentaObjeto &);
-	CuentaObjeto & metodo(const CuentaObjeto &);
+//	CuentaObjeto & metodo(const CuentaObjeto &);
 	static void mostrarResumen();
 	~CuentaObjeto();
 
