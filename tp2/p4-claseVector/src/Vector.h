@@ -15,6 +15,9 @@ class Vector{
 
 public:
 	Vector();
+	Vector(int,item);
+	Vector(const Vector &);
+	~Vector();
 	int getCapacidad();
 	item &operator[](int pos)const;
 };

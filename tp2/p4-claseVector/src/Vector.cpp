@@ -4,7 +4,7 @@
 #include "Vector.h"
 using namespace std;
 
-bool Vector::reservarMemoria(int dim){
+bool Vector::reservarMemoria(int dim) {
 	this->arreglo = new item[dim];
 	if(!this->arreglo){
 		cerr<<"Memoria insuficiente"<<endl;
@@ -14,24 +14,51 @@ bool Vector::reservarMemoria(int dim){
 		return true;
 }
 
-Vector:: Vector(){
+Vector:: Vector() {
 
-	if (reservarMemoria(10))
+	if(reservarMemoria(10))
 		this->max=10;
 	else
 		this->max=0;
+}
+
+Vector:: Vector(int dim, item x) {
+	if(reservarMemoria(dim)) {
+		for(int i = 0; i < dim; ++i) {
+			this->arreglo[i] = x;
+		}
+		this->max=dim;
+	}
+	else
+		this->max=0;
+}
+
+Vector:: Vector(const Vector &v) {
+	if(reservarMemoria(v.max)) {
+		this->max = v.max;
+		for(int i = 0; i < max; ++i) {
+			this->arreglo[i] = v.arreglo[i];
+		}
+	} else
+		this->max=0;
+}
+
+Vector:: ~Vector() {
+	if(this->max>0) {
+		delete [] this->arreglo;
+	}
+	this->max=0;
 }
 
 int Vector:: getCapacidad(){
 	return this->max;
 }
 
-
 item& Vector:: operator[](int pos)const{
-	if(0<=pos && pos<=this->max)
+	if(0<=pos && pos<this->max)
 		return this->arreglo[pos];
 	else{
-		cerr<<"Posición inválida"<<endl;
+		cerr<<"PosiciÃ³n invÃ¡lida"<<endl;
 		return this->arreglo[0];
 	}
 }
