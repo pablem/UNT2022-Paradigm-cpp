@@ -1,32 +1,35 @@
-
-
 #ifndef LIBRO_H_
 #define LIBRO_H_
+
+#include "Autor.h"
 
 #include <iostream>
 using namespace std;
 
-enum Categoria { Clasico, Policial, Novela };
+enum Categoria { Clasico, Policial, Novela, Desonocido};
 
 class Libro {
 
+	static int librosCreados;
+	static const float IVA=0.21;
 	int codigo;
 	string titulo;
 	string descripcion;
-	string autor;
+	Autor *autor;
 	Categoria categoria;
 	float precio;
-	static const float IVA;
 
 protected:
-	float getIVA();
 	float getPrecioBase();
 
 public:
-	Libro(int cod, string tit, string desc, string aut, Categoria cat, float prec);
+	Libro();
+	Libro(string tit, string desc, Autor *aut, Categoria cat, float prec);
 	float calcularPrecioVenta();
 	void listarInformacion();
-	virtual ~Libro();
+//	virtual ~Libro();
+	void getBiografíaAutor();
+
 };
 
 #endif /* LIBRO_H_ */
