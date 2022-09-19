@@ -3,14 +3,16 @@
 
 using namespace std;
 
+int Producto::productosCreados=0;
+
 Producto::Producto() {
-	codigo=0;
+	codigo=++Producto::productosCreados;
 	precioBase=0;
 	descripcion=" ";
 }
 
-Producto::Producto(int cod, string desc, float precio) {
-	codigo = cod;
+Producto::Producto(string desc, float precio) {
+	codigo = ++Producto::productosCreados;
 	precioBase = precio;
 	descripcion = desc;
 }
@@ -22,23 +24,35 @@ Producto::Producto(const Producto &p) {
 }
 
 float Producto::calcularPrecio() {
-	return precioBase + IVA*precioBase;
+	return (1.0+this->IVA)*this->precioBase;
 }
 
 void Producto::mostrar() {
-	cout << codigo << " - " << descripcion << " - Precio base: $" << precioBase <<endl;
+	cout << codigo << " - " << descripcion << " - $" << precioBase <<endl;
 }
 
-int Producto::getCodigo() const {
-	return codigo;
+//string Producto::listar() {
+//	return  (string)codigo << " - " << descripcion << " - $" << (string)precioBase;
+//}
+
+//int Producto::getCodigo() const {
+//	return codigo;
+//}
+
+void Producto::setDescripcion(const string &descripcion) {
+	this->descripcion = descripcion;
 }
 
-string Producto::getDescripcion() const {
-	return descripcion;
+//const string& Producto::getDescripcion() const {
+//	return descripcion;
+//}
+
+void Producto::setPrecioBase(float precioBase) {
+	this->precioBase = precioBase;
 }
 
-float Producto::getPrecioBase() const {
-	return precioBase;
-}
+//float Producto::getPrecioBase() const {
+//	return precioBase;
+//}
 
 

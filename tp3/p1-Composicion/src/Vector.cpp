@@ -16,16 +16,17 @@ bool Vector::reservarMemoria(int dim) {
 
 Vector:: Vector() {
 
-	if(reservarMemoria(10))
-		this->max=10;
+	if(reservarMemoria(3))
+		this->max=3;
 	else
 		this->max=0;
 }
 
-Vector:: Vector(int dim, Producto x) {
+Vector:: Vector(int dim, Producto *x) {
+//Vector:: Vector(int dim, Producto x = new Producto) {
 	if(reservarMemoria(dim)) {
 		for(int i = 0; i < dim; ++i) {
-			this->productos[i] = x;
+			this->productos[i] = *x;
 		}
 		this->max=dim;
 	}

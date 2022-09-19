@@ -1,6 +1,5 @@
 #include <iostream>
-#include <chrono>
-#include <ctime>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,21 +7,30 @@ using namespace std;
 #define PRODUCTO_H_
 
 class Producto {
+private:
+	static int productosCreados;
+//	static const float IVA = 0.21; //error con el float
+	static const int IVA = 1;
 	int codigo;
 	string descripcion;
 	float precioBase;
-	static const float IVA = 0.22;
 
 public:
 	Producto();						//...por defecto c/codigo=000
-	Producto(int ,string, float );	//...sobrecargado c/parámetros
+	Producto(string, float );	//...sobrecargado c/parámetros
 	Producto(const Producto &);		//...copia
 	float calcularPrecio();
 	void mostrar();
 //	~Producto(); //virtual?
-	int getCodigo() const;
-	string getDescripcion() const;
-	float getPrecioBase() const;
+
+
+
+//	int getCodigo() const;
+//	float getPrecioBase() const;
+//	const string& getDescripcion() const;
+//
+	void setDescripcion(const string &descripcion);
+	void setPrecioBase(float precioBase);
 
 };
 
