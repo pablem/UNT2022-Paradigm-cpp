@@ -17,6 +17,7 @@ class Autor {
 	int edad;
 public:
 	Autor();
+	Autor(string, string, int);
 //	virtual ~Autor();
 	const string& getBiografia() const;
 	const string& getNombre() const;

@@ -9,6 +9,14 @@
 
 Autor::Autor() {
 	this->edad = 0;
+	this->nombre = "Autor Desconocido";
+	this->biografia = "Sin Bio";
+}
+
+Autor::Autor(string nomb, string descr, int edad) {
+	Autor::edad= edad;
+	this->nombre = nomb;
+	this->biografia = descr;
 }
 int Autor::getEdad() const {
 	return edad;

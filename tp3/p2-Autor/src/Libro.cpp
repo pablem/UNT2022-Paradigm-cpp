@@ -3,12 +3,13 @@
 using namespace std;
 
 int Libro::librosCreados = 332;
+const float Libro::IVA = 0.21;
 
 Libro::Libro() {
 	this->codigo = ++Libro::librosCreados;
 	this->titulo = "Título Desconocido";
 	this->descripcion = "Sin Descripción";
-	this->autor = new Autor();
+	this->autor = new Autor;
 	this->categoria = Categoria::Desonocido;
 	this->precio = 0;
 }
@@ -33,7 +34,7 @@ void Libro::getBiografíaAutor() {
 	cout<<this->autor->getNombre()<<" - "<<this->autor->getEdad()<<" años."<<endl;
 	cout<<this->autor->getBiografia()<<endl;
 }
-//Libro::~Libro() {
-//	// TODO Auto-generated destructor stub
-//}
+Libro::~Libro() {
+	delete this->autor;
+}
 

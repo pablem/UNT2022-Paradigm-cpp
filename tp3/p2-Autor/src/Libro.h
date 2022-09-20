@@ -6,12 +6,13 @@
 #include <iostream>
 using namespace std;
 
-enum Categoria { Clasico, Policial, Novela, Desonocido};
+enum Categoria { Clasico, Policial, Novela, Desonocido };
 
 class Libro {
 
 	static int librosCreados;
-	static const float IVA=0.21;
+	static const float IVA;
+
 	int codigo;
 	string titulo;
 	string descripcion;
@@ -27,7 +28,7 @@ public:
 	Libro(string tit, string desc, Autor *aut, Categoria cat, float prec);
 	float calcularPrecioVenta();
 	void listarInformacion();
-//	virtual ~Libro();
+	virtual ~Libro();
 	void getBiografíaAutor();
 
 };
