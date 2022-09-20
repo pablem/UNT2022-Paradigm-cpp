@@ -27,14 +27,44 @@ float Libro::getPrecioBase(){
 }
 
 void Libro::listarInformacion() {
-	cout << "C�digo: " << this->codigo << " - T�tulo: " << this->titulo << " - Categoria: " << this->categoria <<" - etc.." <<endl;
+	cout << "Código: " << this->codigo << " - Título: " << this->titulo << " - Categoria: " << this->categoria <<" - etc.." <<endl;
 }
 
 void Libro::getBiografíaAutor() {
 	cout<<this->autor->getNombre()<<" - "<<this->autor->getEdad()<<" años."<<endl;
 	cout<<this->autor->getBiografia()<<endl;
 }
+
 Libro::~Libro() {
 	delete this->autor;
 }
+
+//geters
+const Autor*& Libro::getAutor() const {
+	return Libro::autor;
+}
+Categoria Libro::getCategoria() const {
+	return categoria;
+}
+int Libro::getCodigo() const {
+	return codigo;
+}
+const string& Libro::getDescripcion() const {
+	return descripcion;
+}
+const string& Libro::getTitulo() const {
+	return titulo;
+}
+
+//overrays
+ostream & operator<<(ostream& salida, Libro *libro) {
+	salida<< "Cód: "<< libro->getCodigo() <<endl;
+	salida<< "Título: "<<libro->getTitulo()<<endl;
+	salida<< "Descr: "<<libro->getDescripcion()<<endl;
+	salida<< "Autor: "<<libro->getAutor()->getNombre()<<endl;
+	salida<< "Cat: "<<libro->getCategoria()<<endl;
+	salida<< "Precio: "<<libro->getPrecioBase()<<endl;
+	return salida;
+}
+
 

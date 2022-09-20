@@ -20,17 +20,27 @@ class Libro {
 	Categoria categoria;
 	float precio;
 
-protected:
-	float getPrecioBase();
-
 public:
 	Libro();
 	Libro(string tit, string desc, Autor *aut, Categoria cat, float prec);
-	float calcularPrecioVenta();
+	
+	
+	float getPrecioBase();
 	void listarInformacion();
-	virtual ~Libro();
 	void getBiografíaAutor();
 
+	//geters
+	const Autor*& getAutor() const;
+	Categoria getCategoria() const;
+	int getCodigo() const;
+	const string& getDescripcion() const;
+	const string& getTitulo() const;
+
+	virtual ~Libro();
 };
+
+//Sobrecarga del operador de insercion de  flujo para
+//escribir en un flujo de salida la información de un libro
+ostream & operator<<(ostream& salida, Libro *libro);
 
 #endif /* LIBRO_H_ */

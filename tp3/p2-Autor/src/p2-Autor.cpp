@@ -13,9 +13,10 @@ using namespace std;
 int main() {
 
 	Autor aut("Tolkien","Nació en Inglaterra...A los 20 años fue a la guerra...",87);
-	Libro lib("TLOTR","Novela de fantasía épia",&aut,Categoria::Novela,3500);
+	Libro lib1("TLOTR",         "Novela de fantasía épia",&aut,Categoria::Novela,3500);
+	Libro lib2("El Hobbit",     "Novela de fantasía épia",&aut,Categoria::Novela,3500);
+	Libro lib3("El Silmarillon","Novela de fantasía épia",&aut,Categoria::Novela,3500);
 
-	lib.getBiografíaAutor();
 
 	return 0;
 }
