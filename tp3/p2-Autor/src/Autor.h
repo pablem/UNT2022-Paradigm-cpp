@@ -24,4 +24,8 @@ public:
 	int getEdad() const;
 };
 
+//Sobrecarga del operador de insercion de flujo para
+//escribir en un flujo de salida la información de un autor
+ostream & operator<<(ostream& salida, Autor *autor);
+
 #endif /* AUTOR_H_ */

@@ -40,8 +40,8 @@ Libro::~Libro() {
 }
 
 //geters
-const Autor*& Libro::getAutor() const {
-	return Libro::autor;
+Autor * Libro::getAutor() {
+	return this->autor;
 }
 Categoria Libro::getCategoria() const {
 	return categoria;
@@ -58,11 +58,14 @@ const string& Libro::getTitulo() const {
 
 //overrays
 ostream & operator<<(ostream& salida, Libro *libro) {
+	//(PARCHE como imprimir enum como string?)
+	const char* Categ[] = {"Clásico","Policial","Novela","Desconocido"};
+	////
 	salida<< "Cód: "<< libro->getCodigo() <<endl;
 	salida<< "Título: "<<libro->getTitulo()<<endl;
 	salida<< "Descr: "<<libro->getDescripcion()<<endl;
-	salida<< "Autor: "<<libro->getAutor()->getNombre()<<endl;
-	salida<< "Cat: "<<libro->getCategoria()<<endl;
+	salida<< "Autor: "<<libro->getAutor()<<endl;
+	salida<< "Cat: "<<Categ[libro->getCategoria()]<<endl;
 	salida<< "Precio: "<<libro->getPrecioBase()<<endl;
 	return salida;
 }

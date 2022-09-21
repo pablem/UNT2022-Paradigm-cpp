@@ -32,7 +32,11 @@ public:
 //	bool agregarLibro(Libro&);
 	bool agregarLibro(string tit, string desc, Autor &aut, Categoria cat, float prec);
 	float calcularMonto();
+
+	const vector<Libro*>& getLibros() const;
+
 	virtual ~Venta();
+
 };
 
 #endif /* VENTA_H_ */

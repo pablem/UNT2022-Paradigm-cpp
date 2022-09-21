@@ -9,7 +9,6 @@ using namespace std;
 enum Categoria { Clasico, Policial, Novela, Desonocido };
 
 class Libro {
-
 	static int librosCreados;
 	static const float IVA;
 
@@ -30,7 +29,8 @@ public:
 	void getBiografíaAutor();
 
 	//geters
-	const Autor*& getAutor() const;
+//	const Autor*& getAutor() const;
+	Autor * getAutor();
 	Categoria getCategoria() const;
 	int getCodigo() const;
 	const string& getDescripcion() const;

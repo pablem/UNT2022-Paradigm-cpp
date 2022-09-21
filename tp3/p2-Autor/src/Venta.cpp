@@ -42,11 +42,16 @@ float Venta::calcularMonto() {
 	return suma;
 }
 
+const vector<Libro*>& Venta::getLibros() const {
+	return libros;
+}
+
 //Al eliminarse la venta, se eliminan
 //todos los libros asociadas a la misma
 Venta::~Venta() {
 	vector<Libro*>::iterator it;
 		for (it=libros.begin(); it!=libros.end(); ++it){
+			delete (*it)->getAutor();//---------------------->>Hace falta??
 			delete (*it); //Llama al detructor del libro y libera la memoria
 		}
 		libros.clear();

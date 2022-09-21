@@ -27,8 +27,10 @@ const string& Autor::getBiografia() const {
 const string& Autor::getNombre() const {
 	return nombre;
 }
-//
-//Autor::~Autor() {
-//	// TODO Auto-generated destructor stub
-//}
+
+//overrays
+ostream & operator<<(ostream& salida, Autor *autor) {
+	salida<< autor->getNombre();
+	return salida;
+}
 
