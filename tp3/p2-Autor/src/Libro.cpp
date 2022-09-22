@@ -35,10 +35,6 @@ void Libro::getBiografíaAutor() {
 	cout<<this->autor->getBiografia()<<endl;
 }
 
-Libro::~Libro() {
-	delete this->autor;
-}
-
 //geters
 Autor * Libro::getAutor() {
 	return this->autor;
@@ -54,6 +50,10 @@ const string& Libro::getDescripcion() const {
 }
 const string& Libro::getTitulo() const {
 	return titulo;
+}
+
+Libro::~Libro() {
+	cout<<"Elimina libro\n";
 }
 
 //overrays

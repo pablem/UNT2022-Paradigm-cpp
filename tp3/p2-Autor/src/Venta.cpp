@@ -22,16 +22,17 @@ Venta::Venta(Fecha &fecha, string clien):fechaCompra(fecha) {
 	this->cliente = clien;
 }
 
-//bool Venta::agregarLibro(Libro *lib) {
-//	this->libros.insert(this->libros.end(),lib);
-//	return true;
-//}
+bool Venta::agregarLibro(Libro *lib) {
+	this->libros.insert(this->libros.end(),lib);
 
-bool Venta::agregarLibro(string titulo, string descr, Autor &autor, Categoria cat, float precio) {
-	Libro *nuevo = new Libro(titulo,descr,&autor,cat,precio);
-	this->libros.insert(this->libros.end(),nuevo);
 	return true;
 }
+
+//bool Venta::agregarLibro(string titulo, string descr, Autor &autor, Categoria cat, float precio) {
+//	Libro *nuevo = new Libro(titulo,descr,&autor,cat,precio);
+//	this->libros.insert(this->libros.end(),nuevo);
+//	return true;
+//}
 
 float Venta::calcularMonto() {
 	float suma = 0;
@@ -49,10 +50,6 @@ const vector<Libro*>& Venta::getLibros() const {
 //Al eliminarse la venta, se eliminan
 //todos los libros asociadas a la misma
 Venta::~Venta() {
-	vector<Libro*>::iterator it;
-		for (it=libros.begin(); it!=libros.end(); ++it){
-			delete (*it)->getAutor();//---------------------->>Hace falta??
-			delete (*it); //Llama al detructor del libro y libera la memoria
-		}
-		libros.clear();
+	cout<<"Elimina venta\n";
+	libros.clear();//??
 }

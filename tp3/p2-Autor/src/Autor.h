@@ -18,10 +18,11 @@ class Autor {
 public:
 	Autor();
 	Autor(string, string, int);
-//	virtual ~Autor();
 	const string& getBiografia() const;
 	const string& getNombre() const;
 	int getEdad() const;
+
+	~Autor();
 };
 
 //Sobrecarga del operador de insercion de flujo para

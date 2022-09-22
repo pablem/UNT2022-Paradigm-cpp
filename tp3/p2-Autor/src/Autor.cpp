@@ -28,6 +28,10 @@ const string& Autor::getNombre() const {
 	return nombre;
 }
 
+Autor::~Autor() {
+	cout<<"Eliminar Autor\n";
+}
+
 //overrays
 ostream & operator<<(ostream& salida, Autor *autor) {
 	salida<< autor->getNombre();

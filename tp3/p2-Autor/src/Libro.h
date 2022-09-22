@@ -36,7 +36,7 @@ public:
 	const string& getDescripcion() const;
 	const string& getTitulo() const;
 
-	virtual ~Libro();
+	~Libro();
 };
 
 //Sobrecarga del operador de insercion de  flujo para
