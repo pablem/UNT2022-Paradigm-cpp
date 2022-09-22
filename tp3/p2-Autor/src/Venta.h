@@ -9,7 +9,6 @@
 #define VENTA_H_
 
 #include "Libro.h"
-//#include "Autor.h"
 #include "Fecha.h"
 
 #include <vector>
@@ -30,13 +29,14 @@ public:
 	Venta();
 	Venta(Fecha &fecha,string cliente);
 	bool agregarLibro(Libro*);
-//	bool agregarLibro(string tit, string desc, Autor &aut, Categoria cat, float prec);
 	float calcularMonto();
+	const Fecha& getFechaCompra() const;
 	const vector<Libro*>& getLibros() const;
-
+	const string& getCliente() const;
 
 	virtual ~Venta();
-
 };
+
+ostream & operator<<(ostream& salida, Venta *venta);
 
 #endif /* VENTA_H_ */

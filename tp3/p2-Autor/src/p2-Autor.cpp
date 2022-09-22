@@ -30,5 +30,23 @@ int main() {
 	for(auto x : venta.getLibros())
 		cout<<x<<endl;
 
+	Autor *aut2 = new Autor("autor2","...",25);
+	Libro *lib4 = new Libro("libro4","...",aut2,Categoria::Policial,1000);
+
+	Fecha f2(21,9,2011);
+	Venta venta2(f2,"Cliente Anita");
+	venta2.agregarLibro(lib4);
+
+	Fecha f3(22,9,2011);
+	Venta venta3(f2,"Cliente Juanito");
+	venta3.agregarLibro(lib4);
+	venta3.agregarLibro(lib2);
+
+	delete aut;
+	delete aut2;
+	delete lib1;
+	delete lib2;
+	delete lib3;
+	delete lib4;
 	return 0;
 }

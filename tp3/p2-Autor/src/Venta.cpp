@@ -24,15 +24,8 @@ Venta::Venta(Fecha &fecha, string clien):fechaCompra(fecha) {
 
 bool Venta::agregarLibro(Libro *lib) {
 	this->libros.insert(this->libros.end(),lib);
-
 	return true;
 }
-
-//bool Venta::agregarLibro(string titulo, string descr, Autor &autor, Categoria cat, float precio) {
-//	Libro *nuevo = new Libro(titulo,descr,&autor,cat,precio);
-//	this->libros.insert(this->libros.end(),nuevo);
-//	return true;
-//}
 
 float Venta::calcularMonto() {
 	float suma = 0;
@@ -43,13 +36,31 @@ float Venta::calcularMonto() {
 	return suma;
 }
 
+const string& Venta::getCliente() const {
+	return cliente;
+}
+
+const Fecha& Venta::getFechaCompra() const {
+	return fechaCompra;
+}
+
 const vector<Libro*>& Venta::getLibros() const {
 	return libros;
 }
 
-//Al eliminarse la venta, se eliminan
-//todos los libros asociadas a la misma
 Venta::~Venta() {
 	cout<<"Elimina venta\n";
 	libros.clear();//??
+}
+
+
+ostream & operator<<(ostream& salida, Venta *venta) {
+
+	salida<< "Cliente: "<< venta->getCliente() <<endl;
+	salida<< "Libros: "<< endl;
+	int i = 1;
+	for(auto x : venta->getLibros()) {
+		salida<<"\t"<<i++<<") "<<x->getTitulo()<<endl;
+	}
+	return salida;
 }
