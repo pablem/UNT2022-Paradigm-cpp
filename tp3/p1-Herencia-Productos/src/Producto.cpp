@@ -46,6 +46,8 @@ float ProdAlimenticio::calcularPrecio() {
 	return 1.21*precioBase;
 }
 
+ProdAlimenticio::~ProdAlimenticio() {}
+
 //METODOS CLASE PROD LIMPIEZA---------------------------------------
 
 ProdLimpieza::ProdLimpieza(int cod,string des,float precio,bool toxico) : Producto(cod,des,precio) {
@@ -60,7 +62,7 @@ float ProdLimpieza::calcularPrecio() {
 	return 1.105*precioBase;
 }
 
-
+ProdLimpieza::~ProdLimpieza() {}
 
 
 
