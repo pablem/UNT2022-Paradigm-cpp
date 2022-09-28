@@ -24,6 +24,10 @@ const string& Producto::getDescripion() const {
 	return descripion;
 }
 
+float Producto::getPrecioBase() const {
+	return precioBase;
+}
+
 float Producto::calcularPrecio() {
 	return 0;
 }
@@ -31,6 +35,7 @@ float Producto::calcularPrecio() {
 //METODOS CLASE PROD ALIMENTICIO---------------------------------------
 
 ProdAlimenticio::ProdAlimenticio(int cod,string des,float precio,Fecha fecha, bool apto) : Producto(cod,des,precio) {
+	this->fechaVto = fecha;
 	this->aptoCeliaco = apto;
 }
 
@@ -64,5 +69,13 @@ float ProdLimpieza::calcularPrecio() {
 
 ProdLimpieza::~ProdLimpieza() {}
 
+
+//overrays
+ostream & operator<<(ostream& salida, Producto *prod) {
+	salida<< "Cód: "<< prod->getCodigo() <<endl;
+	salida<< "Descripción: "<<prod->getDescripion()<<endl;
+	salida<< "Precio Base: "<<prod->getPrecioBase()<<endl;
+	return salida;
+}
 
 

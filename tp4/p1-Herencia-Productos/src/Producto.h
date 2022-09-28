@@ -26,8 +26,10 @@ public:
 	//getters
 	int getCodigo() const;
 	const string& getDescripion() const;
+	float getPrecioBase() const;
 	//métodos
 	virtual float calcularPrecio();
+
 };
 
 class ProdAlimenticio : public Producto {
@@ -56,5 +58,8 @@ public:
 	//metodos
 	float calcularPrecio();
 };
+
+//overrays
+ostream & operator<<(ostream& salida, Producto *prod);
 
 #endif /* PRODUCTO_H_ */
