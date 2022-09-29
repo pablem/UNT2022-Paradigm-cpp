@@ -52,22 +52,16 @@ int main() {
 	for(Producto *prod : productoss) {
 		cout<<prod;
 	}
-//
-//	cout<<"\n01.- Mostrar Ventas creadas"<<endl;
-//	vector<Venta*> ventass = alm1.getVentas();
-//	for(Venta *venta : ventass) {
-//		cout<<venta;
-//	}
+
+	cout<<"\n01.- Mostrar Ventas creadas"<<endl;
+	vector<Venta*> ventass = alm1.getVentas();
+	for(Venta *venta : ventass) {
+		cout<<venta;
+	}
 
 	cout<<"\n02.- Calcular ingresos entre el 2 y el 20 de Agosto"<<endl;
 	alm1.montoFinMes(fIni,fFin);
 
-
-
-
-//	cout<<alm1.getVenta(2)->calcularMonto()<<endl;
-//
-//	cout<<alm1.getVenta(2)->getProductos()[0]->calcularPrecio();
 
 
 

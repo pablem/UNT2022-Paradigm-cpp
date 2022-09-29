@@ -10,7 +10,7 @@
 
 using namespace std;
 
-//MÉTODOS DE LA CLASE BASE PRODUCTO-------------------------------------
+//Mï¿½TODOS DE LA CLASE BASE PRODUCTO-------------------------------------
 
 Producto::Producto():codigo(0),descripion("@"),precioBase(0) {}
 Producto::Producto(int cod,string des,float precio):codigo(cod),descripion(des),precioBase(precio) {}
@@ -72,8 +72,8 @@ ProdLimpieza::~ProdLimpieza() {}
 
 //overrays
 ostream & operator<<(ostream& salida, Producto *prod) {
-	salida<< "Cód: "<< prod->getCodigo() <<endl;
-	salida<< "Descripción: "<<prod->getDescripion()<<endl;
+	salida<< "CÃ³d: "<< prod->getCodigo() <<endl;
+	salida<< "DescripciÃ³n: "<<prod->getDescripion()<<endl;
 	salida<< "Precio Base: "<<prod->getPrecioBase()<<endl;
 	return salida;
 }

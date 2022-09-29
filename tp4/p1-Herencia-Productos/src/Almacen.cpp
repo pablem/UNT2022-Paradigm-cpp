@@ -20,7 +20,7 @@ const vector<Venta*>& Almacen::getVentas() const {
 	return ventas;
 }
 
-//métodos de Almacén:
+//mï¿½todos de Almacï¿½n:
 
 void Almacen::crearVenta() {
 	Venta *nueva = new Venta;
@@ -44,12 +44,13 @@ void Almacen::montoFinMes(Fecha fechaIn, Fecha fechaFin) {
 }
 
 Venta* Almacen::getVenta(int cod) {
+	Venta *nula;
 	vector<Venta*>::iterator it;
 	for (it=this->ventas.begin(); it!=this->ventas.end(); ++it) {
 		if ((*it)->getCodigo() == cod )
 			return *it;
 	}
-	return *it;
+	return nula;
 }
 
 
