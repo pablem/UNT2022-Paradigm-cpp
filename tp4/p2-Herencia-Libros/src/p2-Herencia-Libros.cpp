@@ -27,7 +27,7 @@ int main() {
 
 	Fecha f1(20,9,2021);
 	Fecha f2(25,9,2021);
-	Fecha f3(26,9,2021);
+	Fecha f3(27,9,2021);
 	Fecha fechaI(23,9,2021);
 	Fecha fechaF(26,9,2021);
 
