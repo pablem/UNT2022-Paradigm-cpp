@@ -7,9 +7,11 @@ using namespace std;
 
 template<class X, int dim=10>
 class IteradorDeVector;
+
 template <class X, int dim=10>
 class Vector{
-	static X INDEFINIDO;
+
+	static X indefinido;
 	X *arreglo;
 	int max;
 
@@ -32,10 +34,7 @@ Vector<X,dim>:: Vector() {
 	if(!this->arreglo){
 		this->max = 0;
 		cerr<<"Memoria insuficiente"<<endl;
-//		return false;
 	}
-//	else
-//		return true;
 }
 
 template <class X, int dim>
@@ -47,7 +46,6 @@ Vector<X,dim>:: Vector(X x) {
 	if(!this->arreglo){
 		this->max = 0;
 		cerr<<"Memoria insuficiente"<<endl;
-//		return false;
 	}
 	else {
 		for(int i = 0; i < dim; ++i) {
@@ -62,7 +60,6 @@ Vector<X,dim>:: Vector(const Vector<X,dim> &v) {
 	if(!this->arreglo){
 		this->max=0;
 		cerr<<"Memoria insuficiente"<<endl;
-//		return false;
 	} else {
 		this->max = v.max;
 		for(int i = 0; i < max; ++i) {
@@ -89,7 +86,7 @@ X& Vector<X,dim>:: operator[](int pos)const{
 	if(0<=pos && pos<this->max)
 		return this->arreglo[pos];
 	else{
-		cerr<<"Posición Inválida"<<endl;
+		cerr<<"Posiciï¿½n Invï¿½lida"<<endl;
 		return this->arreglo[0];
 	}
 }

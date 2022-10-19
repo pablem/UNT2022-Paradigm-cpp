@@ -13,6 +13,7 @@ using namespace std;
 
 template <class X, int dim>
 class IteradorDeVector{
+
 	const Vector<X,dim> &contenedor;
 	int indiceActual;
 
