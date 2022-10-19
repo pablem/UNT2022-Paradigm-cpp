@@ -18,10 +18,8 @@ private:
 	string direccion;
 	Fecha fechaNac;
 	Fecha fechaIngreso;
-	float sueldoBasico;
 
 public:
-
 	/*Construct - Destruct - Getters*/
 	Empleado(int dni, string nom, string dire, Fecha nac, Fecha in, float sueldo);
 	virtual ~Empleado();
@@ -34,8 +32,6 @@ public:
 
 	/*Métodos DE Empeado*/
 	int Antiguedad();
-	float Retenciones();
-	float SueldoNeto();
 	string TipoEmpleado();
 	virtual unsigned int getJubilacion() = 0;
 	virtual float SueldoBruto() = 0;

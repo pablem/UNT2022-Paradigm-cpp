@@ -47,6 +47,7 @@ float Empleado::SueldoNeto() {
 }
 
 ostream& operator<<(ostream& salida, const Empleado* emp) {
+
 	return emp->imprimir_en(salida);
 }
 

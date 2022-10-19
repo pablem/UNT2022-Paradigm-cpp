@@ -8,18 +8,19 @@
 #ifndef TECNICO_H_
 #define TECNICO_H_
 
-#include "Empleado.h"
+#include "TipoEmpleado.h"
 
-class Tecnico: public Empleado {
+class Tecnico: public TipoEmpleado {
 private:
-	static const unsigned int COMPENSACION = 10;//
-	unsigned int jubilacionPactado;
+	static float sueldoBasico;
+	static const int COMPENSACION = 10;//
+	int jubilacionPactado;
 public:
 	Tecnico(int dni, string nom, string dire, Fecha nac, Fecha in, float sueldo, int jubilacion);
 	virtual ~Tecnico();
 
-	unsigned int getJubilacion();
-	float SueldoBruto();
+	int Retenciones();
+	float SueldoBruto(int antiguedad);
 
 };
 

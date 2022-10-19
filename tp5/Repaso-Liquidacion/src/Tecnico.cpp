@@ -7,9 +7,9 @@
 
 #include "Tecnico.h"
 
-Tecnico::Tecnico(int dni, string nom, string dire, Fecha nac, Fecha in, float sueldo, int jubilacion):
-	Empleado(dni,nom,dire,nac,in, sueldo) {
-	this->jubilacionPactado = jubilacion;
+float Tecnico::sueldoBasico = 200;
+
+Tecnico::Tecnico() {S
 }
 Tecnico::~Tecnico() {
 	// TODO Auto-generated destructor stub
