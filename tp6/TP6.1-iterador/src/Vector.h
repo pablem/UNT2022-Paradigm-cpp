@@ -20,6 +20,8 @@ public:
 	~Vector();
 	int getCapacidad();
 	item &operator[](int pos)const;
+
+	friend class IteradorDeVector;
 };
 
 istream& operator>>(istream& entra, Vector &v);

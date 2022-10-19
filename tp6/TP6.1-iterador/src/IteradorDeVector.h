@@ -1,9 +1,3 @@
-/*
- * IteradorDeVector.h
- *
- *  Created on: 19 oct. 2022
- *      Author: Alumno
- */
 
 #ifndef ITERADORDEVECTOR_H_
 #define ITERADORDEVECTOR_H_
@@ -12,21 +6,23 @@
 using namespace std;
 
 class IteradorDeVector{
-			const Vector &listaEnlazada;
-			Nodo* actual;
-		public:
-			Iterador(const Lista &l):listaEnlazada(l),actual(l.lista){};
-			//Iterador(const Lista &l):actual(l.lista){};
-			bool hayMasElementos(){
-				return actual!=NULL;
+	const Vector &contenedor;
+	int indiceActual;
 
-			};
-			item elementoActual(){
-				return actual->getDato();
-			};
-			void avanzar(){
-				actual=actual->getSiguiente();
-			};
+public:
+	IteradorDeVector(const Vector &v):contenedor(v),indiceActual(0){};
+
+	bool hayMasElementos(){
+		return indiceActual<contenedor.max;
+	};
+
+	item elementoActual(){
+		return contenedor[indiceActual];
+	};
+
+	void avanzar(){
+		indiceActual++;
+	};
 };
 
 #endif /* ITERADORDEVECTOR_H_ */

@@ -58,7 +58,7 @@ item& Vector:: operator[](int pos)const{
 	if(0<=pos && pos<this->max)
 		return this->arreglo[pos];
 	else{
-		cerr<<"PosiciÃ³n invÃ¡lida"<<endl;
+		cerr<<"Posición Inválida"<<endl;
 		return this->arreglo[0];
 	}
 }
