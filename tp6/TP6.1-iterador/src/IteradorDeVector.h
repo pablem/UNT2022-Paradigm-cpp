@@ -1,11 +1,18 @@
-#ifndef ITERADOR_H_
-#define ITERADOR_H_
+/*
+ * IteradorDeVector.h
+ *
+ *  Created on: 19 oct. 2022
+ *      Author: Alumno
+ */
 
-#include "Lista.h"
+#ifndef ITERADORDEVECTOR_H_
+#define ITERADORDEVECTOR_H_
+
+#include "Vector.h"
 using namespace std;
 
-class Iterador{
-			const Lista &listaEnlazada;
+class IteradorDeVector{
+			const Vector &listaEnlazada;
 			Nodo* actual;
 		public:
 			Iterador(const Lista &l):listaEnlazada(l),actual(l.lista){};
@@ -21,4 +28,5 @@ class Iterador{
 				actual=actual->getSiguiente();
 			};
 };
-#endif /* ITERADOR_H_ */
+
+#endif /* ITERADORDEVECTOR_H_ */

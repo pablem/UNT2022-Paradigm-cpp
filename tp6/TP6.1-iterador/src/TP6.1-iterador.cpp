@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : tp6-templ-cont-it.cpp
+// Name        : 1-iterador.cpp
 // Author      : 
 // Version     :
 // Copyright   : Your copyright notice
