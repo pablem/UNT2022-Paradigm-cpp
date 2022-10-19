@@ -13,10 +13,10 @@ using namespace std;
 
 #define MAX 3
 
-template<class T>
-bool operator !=(T x, T y){
-	return !(x==y);
-};
+//template<class T>
+//bool operator !=(T x, T y){
+//	return !(x==y);
+//};
 
 template <class X>
 bool pertenece(Vector<X,MAX> v, X x);
@@ -53,7 +53,7 @@ int main() {
 	vector2[1]=serv2;
 	vector2[2]=serv3;
 
-	cout<<"-Nuevo vector de Servicios creado-"<<endl;
+	cout<<"\n\n-Nuevo vector de Servicios creado-"<<endl;
 	cout<<vector2<<endl;
 
 	cout<<"Pruebo si x=serv2 pertenece al vector:"<<endl;

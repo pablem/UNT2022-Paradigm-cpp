@@ -17,13 +17,25 @@ private:
 	string descripcion;
 	float precioBase;
 public:
-	Servicio(int cod, string desc, float precio);
+	Servicio(int cod=0, string desc="", float precio=0);
 	virtual ~Servicio();
 	int getCod() const;
 	const string& getDescripcion() const;
 	float getPrecioBase() const;
-};
 
-ostream & operator<<(ostream& salida, Servicio *serv);
+	friend bool operator==(Servicio A, Servicio B){
+		if (A.cod == B.cod)
+			return true;
+		else
+			return false;
+	};
+
+	friend ostream & operator <<(ostream& salida, Servicio serv) {
+		salida<< " Cód: "<<serv.getCod();
+		salida<< ". Descripción: "<<serv.getDescripcion();
+		salida<< ". Precio: "<<serv.getPrecioBase()<<"  ";
+		return salida;
+	};
+};
 
 #endif /* SERVICIO_H_ */

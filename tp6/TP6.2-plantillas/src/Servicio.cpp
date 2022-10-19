@@ -25,9 +25,3 @@ float Servicio::getPrecioBase() const {
 }
 /* FIN getters ----------------------------------*/
 
-ostream & operator<<(ostream& salida, Servicio *serv) {
-	salida<< "Cód: "<< serv->getCod() <<endl;
-	salida<< "Descripción: "<<serv->getDescripcion()<<endl;
-	salida<< "Precio: "<<serv->getPrecioBase()<<endl;
-	return salida;
-}
