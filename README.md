@@ -1,10 +1,14 @@
 # PARADIGMAS DE PROGRAMACIÓN
 ## TRABAJOS PRÁCTICOS
-+ TP1 Diseño Orientado a Objetos. UML.
++ **TP1 Diseño Orientado a Objetos. UML.**
 + **TP2 Clases en C++.** Constructores y Destructores.
 + **TP3 Clases en C++.** Asociación: Composición y Agregación.
-+ **TP4** Parte 
-+ **TP5**
++ **TP4 Clases en C++.** Generalización
++ **TP5** Repaso..
++ **TP6 Templates, Contenedores e Iteradores. STL**
++ **TP7 Paradigma Lógico** Prolog.
++ **TP8 Paradigma Funcional** Haskell.
++ **TP9**
  
 ## TEMAS
 ### Unidad I: Paradigmas de Programación.
