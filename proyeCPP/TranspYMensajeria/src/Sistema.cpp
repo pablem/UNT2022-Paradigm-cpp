@@ -66,18 +66,22 @@ void Sistema::EmitirInforme(Fecha *fecha) {
 	}
 }
 
-vector<Vehiculo*> Sistema::FiltrarVehiculos(tipoVehiculo tipo) {
-	Fecha f;
-	Moto *m = new Moto(&f,"moto1",100,125);
-	vector<Vehiculo*> nuevaLista;
-	for(Vehiculo *v : this->motosDisponibles) {
-		if(typeid(v)==typeid(*m)) {
-			cout<<"olakhace";
-			nueva
-		}
-	}
-	return
-}
+//vector<Vehiculo*> Sistema::FiltrarVehiculos(tipoVehiculo tipo) {
+//	Fecha f;
+//	switch (tipo) {
+//		case moto: Moto *x = new Moto(f,"",0,0); break;
+//		case furgoneta: Furgoneta *x = new Furgoneta(f,"",0,0); break;
+//		case avion: Avion *x = new Avion(f,"",0); break;
+//	}
+//	vector<Vehiculo*> nuevaLista;
+//	for(Vehiculo *v : this->motosDisponibles) {
+//		if(typeid(v)==typeid(*x)) {
+//			nuevaLista.insert(nuevaLista.end(),v);
+//			cout<<v<<endl;
+//		}
+//	}
+//	return nuevaLista;
+//}
 
 
 /*Getters*/

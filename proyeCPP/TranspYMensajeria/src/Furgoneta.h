@@ -17,6 +17,7 @@ private:
 	static int RECARGO_FIJO;
 	float capacidad_carga;
 public:
+	Furgoneta();
 	Furgoneta(Fecha*,string,float,float);
 	float CalcularRecargo(Mercancia *M);
 
