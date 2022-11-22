@@ -66,6 +66,18 @@ void Sistema::EmitirInforme(Fecha *fecha) {
 	}
 }
 
+vector<Vehiculo*> Sistema::FiltrarVehiculos(tipoVehiculo tipo) {
+	Fecha f;
+	Moto *m = new Moto(&f,"moto1",100,125);
+	vector<Vehiculo*> nuevaLista;
+	for(Vehiculo *v : this->motosDisponibles) {
+		if(typeid(v)==typeid(*m)) {
+			cout<<"olakhace";
+			nueva
+		}
+	}
+	return
+}
 
 
 /*Getters*/

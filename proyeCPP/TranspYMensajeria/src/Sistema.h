@@ -8,6 +8,7 @@
 #ifndef SISTEMA_H_
 #define SISTEMA_H_
 
+#include <typeinfo.h>
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -41,7 +42,7 @@ public:
 	void AsignarVehiculoASupervisor(tipoVehiculo tipo, int iVehiculo, int dniSup); /*temporalmente 3 listas de vahiculos*/
 	void CrearEnvio(tipoEnvio tipo, Fecha *fecha, Persona *origen, Persona *dest, string descripcion, bool es_asegurado, bool es_recorrido_largo, float caracteristicas);
 	void EmitirInforme(Fecha *fecha);
-
+	vector<Vehiculo*> FiltrarVehiculos(tipoVehiculo tipo);
 
 
 	/*Getters*/

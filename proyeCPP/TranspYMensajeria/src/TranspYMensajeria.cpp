@@ -27,6 +27,7 @@ int main() {
 	sys.CrearVehiculo(furgoneta, &f_fab, "combi2", 2000, 4.5);//4
 	sys.CrearVehiculo(avion, &f_fab, "avion1", 10000);//5
 
+
 	cout<<"\n2.- Carga de Supervisores---------------------------------"<<endl;
 	Direccion dire1("Provincia1", "Localidad1", 4600, "Calle1", 100);
 	Direccion dire2("Provincia2", "Localidad2", 4000, "Calle2", 200, 4, "B");
