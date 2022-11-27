@@ -6,8 +6,8 @@
  */
 
 #include "Vehiculo.h"
+
 int Vehiculo::vehiculosCreados = 0;
-//Vehiculo(int cod, int dia, int mes, int anio,string descripcion, float precioCompra);
 Vehiculo::Vehiculo(Fecha *fecha,string descripcion, float precioCompra) {
 	this->cod=++Vehiculo::vehiculosCreados;
 	this->fecha_compra=fecha;

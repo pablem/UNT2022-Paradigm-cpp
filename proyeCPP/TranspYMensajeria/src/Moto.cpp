@@ -16,7 +16,6 @@ Moto::Moto(Fecha *fecha, string descripcion, float precioCompra, float cilindrad
 	this->cilindrada=cilindrada;
 }
 float Moto::CalcularRecargo(Mercancia *M) {
-	/*polimorfismo dinámico*/
 //	Sobre *so = M;
 	if(dynamic_cast<Sobre*>(M)->getPeso() > P_MAX){
 		return M->PrecioNeto()*RECARGO/100;

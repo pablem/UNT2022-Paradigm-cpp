@@ -19,14 +19,13 @@ int main() {
 
 	Sistema sys;
 
-	cout<<"1.- Carga de Vehículos------------------------------------"<<endl;
+	cout<<"1.- Carga de Vehículos--------------------------------------"<<endl;
 	Fecha f_fab(18,11,2022);
 	sys.CrearVehiculo(moto, &f_fab, "moto1", 100, 125);//1
 	sys.CrearVehiculo(moto, &f_fab, "moto2", 200, 300);//2
 	sys.CrearVehiculo(furgoneta, &f_fab, "combi1", 1000, 2.8);//3
 	sys.CrearVehiculo(furgoneta, &f_fab, "combi2", 2000, 4.5);//4
 	sys.CrearVehiculo(avion, &f_fab, "avion1", 10000);//5
-
 
 	cout<<"\n2.- Carga de Supervisores---------------------------------"<<endl;
 	Direccion dire1("Provincia1", "Localidad1", 4600, "Calle1", 100);
@@ -44,7 +43,7 @@ int main() {
 	cout<<*(sys.getSupervisores()[1])<<endl;
 	sys.getSupervisores()[1]->ListarVehiculos();
 
-	cout<<"5.- Carga de envíos---------------------------------------"<<endl;
+	cout<<"5.- Carga de envíos-----------------------------------------"<<endl;
 	Persona orig1(33333333,"Persona1",333,&dire1);
 	Persona dest1(44444444,"Persona2",444,&dire2);
 	Fecha f1;
@@ -66,7 +65,6 @@ int main() {
 	for(Envio *e : sys.getEnvios()) {
 		cout<<e->getMercancia()->getDescripcion();
 		cout<<" | neto: "<<e->getMercancia()->PrecioNeto();
-//		cout<<" | con recargo: "<<e->getMercancia()->PrecioConRecargo();
 		cout<<" | total: "<<e->getPrecio()<<endl;
 	}
 

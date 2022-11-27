@@ -34,8 +34,6 @@ void Sistema::CrearVehiculo(tipoVehiculo tipo, Fecha *fecha, string descripcion,
 }
 
 void Sistema::AsignarVehiculoASupervisor(tipoVehiculo tipo, int iVehiculo, int dniSup) {
-	/*implementando stl::find_if y expresiones lambda*/
-//	vector<Supervisor*>::iterator it = find_if(supervisores.begin(), supervisores.end(), [&](Supervisor &s) {return s.getDni() == dniSup;});
 	vector<Supervisor*>::iterator it;
 	for (it=supervisores.begin(); it!=supervisores.end(); ++it) {
 		if((*it)->getDni() == dniSup)
@@ -65,23 +63,6 @@ void Sistema::EmitirInforme(Fecha *fecha) {
 		}
 	}
 }
-
-//vector<Vehiculo*> Sistema::FiltrarVehiculos(tipoVehiculo tipo) {
-//	Fecha f;
-//	switch (tipo) {
-//		case moto: Moto *x = new Moto(f,"",0,0); break;
-//		case furgoneta: Furgoneta *x = new Furgoneta(f,"",0,0); break;
-//		case avion: Avion *x = new Avion(f,"",0); break;
-//	}
-//	vector<Vehiculo*> nuevaLista;
-//	for(Vehiculo *v : this->motosDisponibles) {
-//		if(typeid(v)==typeid(*x)) {
-//			nuevaLista.insert(nuevaLista.end(),v);
-//			cout<<v<<endl;
-//		}
-//	}
-//	return nuevaLista;
-//}
 
 
 /*Getters*/

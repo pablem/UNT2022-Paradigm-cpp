@@ -15,6 +15,7 @@ Furgoneta::Furgoneta(Fecha *fecha, string descripcion, float precioCompra, float
 	this->capacidad_carga=capacidadCarga;
 }
 float Furgoneta::CalcularRecargo(Mercancia *M) {
+//	Paquete *p = M;
 	if(dynamic_cast<Paquete*>(M)->getDimensiones() > D_MAX) {
 		return RECARGO_FIJO;
 	}else{

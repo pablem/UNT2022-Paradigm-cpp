@@ -27,22 +27,20 @@ enum tipoVehiculo{moto, furgoneta, avion};
 
 class Sistema {
 private:
-	/*temporalmente 3 listas de vahiculos*/
 	static vector<Vehiculo*> motosDisponibles;
 	static vector<Vehiculo*> furgonetasDisponibles;
 	static vector<Vehiculo*> avionesDisponibles;
-	/**/
 	vector<Supervisor*> supervisores;
 	vector<Envio*> envios;
 
 public:
 	Sistema();
 	void CrearSupervisor(int dni, int cuil, string nombre, int telefono, Direccion *dire);
-	void CrearVehiculo(tipoVehiculo tipo, Fecha *fecha, string descripcion, float precioCompra, float caracteristicas=0.0);
-	void AsignarVehiculoASupervisor(tipoVehiculo tipo, int iVehiculo, int dniSup); /*temporalmente 3 listas de vahiculos*/
+	void CrearVehiculo(tipoVehiculo tipo, Fecha *fecha,
+			string descripcion, float precioCompra, float caracteristicas=0.0);
+	void AsignarVehiculoASupervisor(tipoVehiculo tipo, int iVehiculo, int dniSup);
 	void CrearEnvio(tipoEnvio tipo, Fecha *fecha, Persona *origen, Persona *dest, string descripcion, bool es_asegurado, bool es_recorrido_largo, float caracteristicas);
 	void EmitirInforme(Fecha *fecha);
-//	vector<Vehiculo*> FiltrarVehiculos(tipoVehiculo tipo);
 
 
 	/*Getters*/

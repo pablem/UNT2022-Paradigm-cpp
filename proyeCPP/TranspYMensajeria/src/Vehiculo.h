@@ -11,8 +11,6 @@
 #include <vector>
 #include "Fecha.h"
 
-//class Supervisor;
-
 class Mercancia;
 
 class Vehiculo {
@@ -22,10 +20,8 @@ private:
 	Fecha *fecha_compra;
 	string descripcion;
 	float precio_compra;
-//	vector<Supervisor*> supervisores;
 public:
 	Vehiculo(Fecha*,string,float);
-//	void ListarSupervisores();
 	virtual float CalcularRecargo(Mercancia *M)=0;
 
 
