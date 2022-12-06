@@ -1,7 +1,8 @@
 /* TP 7, ej4 */
 
 % a.i) Suma nros naturales
-suma(X,Y,R) :- R is X + Y.
+sumaDigitos(N,N) :- N < 10.
+sumaDigitos(N,R) :- N > 9, D is N mod 10, N1 is N div 10, sumaDigitos(N1,R1), R is D + R1.
 
 % a.ii) Los primeros n nros al cuadrado
 
